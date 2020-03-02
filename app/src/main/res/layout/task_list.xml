@@ -13,7 +13,7 @@
     android:paddingTop="@dimen/row_padding_vertical">
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:textColor="@color/title"
@@ -34,11 +34,5 @@
         android:layout_alignParentLeft="true"
         android:textColor="@color/title"
         android:id="@+id/deadline" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/title"
-        android:id="@+id/level" />
 
 </LinearLayout>

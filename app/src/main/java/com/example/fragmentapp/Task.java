@@ -12,6 +12,7 @@ public class Task {
         this.levelTugas = level;
         this.deadLineTugas = deadline;
     }
+    public Task() {}
 
     public String getTitleTugs() {
         return titleTugs;
@@ -27,5 +28,21 @@ public class Task {
 
     public Date getDeadLineTugas() {
         return deadLineTugas;
+    }
+
+    public void setTitleTugs(String titleTugs) {
+        this.titleTugs = titleTugs;
+    }
+
+    public void setDetailTugas(String detailTugas) {
+        this.detailTugas = detailTugas;
+    }
+
+    public void setDeadLineTugas(Date deadLineTugas) {
+        this.deadLineTugas = deadLineTugas;
+    }
+
+    public void setLevelTugas(String levelTugas) {
+        this.levelTugas = levelTugas;
     }
 }
