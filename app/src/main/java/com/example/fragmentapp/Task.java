@@ -1,12 +1,14 @@
 package com.example.fragmentapp;
 
-import java.util.Date;
+//import java.util.Date;
+import java.io.Serializable;
+import java.sql.Timestamp;
 
-public class Task {
+public class Task implements Serializable {
     private String titleTugs, detailTugas, levelTugas;
-    private Date deadLineTugas;
+    private Timestamp deadLineTugas;
 
-    public Task(String title, String detail, String level, Date deadline){
+    public Task(String title, String detail, String level, Timestamp deadline){
         this.titleTugs = title;
         this.detailTugas = detail;
         this.levelTugas = level;
@@ -14,7 +16,7 @@ public class Task {
     }
     public Task() {}
 
-    public String getTitleTugs() {
+    public String getTitleTugas() {
         return titleTugs;
     }
 
@@ -26,7 +28,7 @@ public class Task {
         return levelTugas;
     }
 
-    public Date getDeadLineTugas() {
+    public Timestamp getDeadLineTugas() {
         return deadLineTugas;
     }
 
@@ -38,7 +40,7 @@ public class Task {
         this.detailTugas = detailTugas;
     }
 
-    public void setDeadLineTugas(Date deadLineTugas) {
+    public void setDeadLineTugas(Timestamp deadLineTugas) {
         this.deadLineTugas = deadLineTugas;
     }
 

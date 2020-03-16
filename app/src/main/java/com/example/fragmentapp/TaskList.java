@@ -3,6 +3,8 @@ package com.example.fragmentapp;
 import android.annotation.SuppressLint;
 import android.widget.ArrayAdapter;
 
+import java.sql.Time;
+import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -21,7 +23,7 @@ public class TaskList {
             "APSI",
             "PPL"
     };
-    private static Date[] taskDeadLine = {
+    private static Timestamp[] taskDeadLine = {
             getDateFormat("03-03-2020 08:00:00"),
             getDateFormat("04-03-2020 08:00:00"),
             getDateFormat("05-03-2020 08:00:00")
@@ -39,12 +41,12 @@ public class TaskList {
             "Tinggi"
     };
 
-    public static Date getDateFormat(String date){
+    public static Timestamp getDateFormat(String date){
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/M/yyyy hh:mm:ss");
-        Date result = null;
+        Timestamp result = null;
 
         try{
-            result = simpleDateFormat.parse(date);
+            result = (Timestamp) simpleDateFormat.parse(date);
         } catch (ParseException e){
             e.printStackTrace();
         }

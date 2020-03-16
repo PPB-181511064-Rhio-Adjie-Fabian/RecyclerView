@@ -7,11 +7,12 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder> {
 
-    private List<Movie> moviesList;
+    private ArrayList<Movie> moviesList;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView title, rating, year;
@@ -23,7 +24,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder
         }
     }
 
-    public MovieAdapter(List<Movie> moviesList){
+    public MovieAdapter(ArrayList<Movie> moviesList){
         this.moviesList = moviesList;
     }
 
